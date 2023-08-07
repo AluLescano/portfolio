@@ -1,0 +1,351 @@
+/*
+=====================================================================
+*   
+*   
+*   
+=====================================================================
+
+TOC:
+* Animaciones
+   a. Header Anims
+   b. Sección Skills
+   c. Slideshow
+   d. Seccion Footer
+   e. No Animation Section / Reduced Motion
+
+=================================================================== */
+
+/* ---------------------------------------------------------------- */
+/* Animaciones
+ ------------------------------------------------------------------ */
+
+/* ---------------------------------------------------------------- */
+/* a. Header Anims
+ ------------------------------------------------------------------ */
+
+/* Logo Button */
+
+.site-logo-scrolled {
+  top: 35% !important;
+}
+
+.site-logo::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-neon);
+  top: 50%;
+  left: 1.2rem;
+  width: 1.2em;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.125);
+  filter: blur(1.5em);
+  opacity: 0.5;
+}
+
+.site-logo::after {
+  content: "";
+  position: absolute;
+  top: 1.8em;
+  left: -0.25em;
+  width: 8em;
+
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.site-logo:hover {
+  background-color: var(--clr-neon);
+  color: var(--clr-bg);
+  text-shadow: none;
+  border-radius: 5em;
+}
+
+.site-logo:hover::before,
+.site-logo:hover::after {
+  opacity: 1;
+}
+
+/* End Logo */
+
+/* Nav Links */
+
+@media only screen and (min-width: 769px) {
+  .nav__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: var(--spacing);
+    right: var(--spacing);
+    height: 1px;
+    background: currentColor;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  }
+
+  .nav__link:hover::after {
+    -webkit-transform: scaleX(1.25);
+    transform: scaleX(1.25);
+  }
+}
+
+.nav-scrolled {
+  --background: #161616c2;
+  box-shadow: 0 9px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* End Nav Links */
+
+/* Botones */
+
+@media only screen and (min-width: 769px) {
+  .social__link:hover {
+    color: #9f81ff !important;
+  }
+
+  .btn_cv:hover {
+    background-color: var(--bg-invert);
+    color: var(--font-color-invert);
+    border: var(--bg-invert) 0.1em solid;
+    text-shadow: 0 0 1em rgb(15, 47, 63);
+  }
+
+  button:hover,
+  button:focus {
+    background-color: rgb(45, 145, 165);
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: var(--clr-inverse);
+    border-color: var(--clr-inverse);
+    color: var(--clr-text-inverse);
+  }
+}
+
+
+/* End Botones */
+
+/* ---------------------------------------------------------------- */
+/* b. Sección Skills
+ ------------------------------------------------------------------ */
+
+@media only screen and (min-width:769px) {
+  .skill {
+    width: 160px;
+    height: 160px;
+    position: relative;
+  }
+
+  .outer {
+    height: 160px;
+    width: 160px;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.5),
+      -6px -6px 10px -1px rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+  }
+
+  .inner {
+    height: 120px;
+    width: 120px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+      inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+      -0.5px -0.5px 0px -1px rgba(255, 255, 255, 1),
+      0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+      0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+  }
+
+  circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+  }
+
+  .html_circle {
+    animation: htmlanim 3s linear forwards;
+  }
+
+  .css_circle {
+    animation: cssanim 3s linear forwards;
+  }
+
+  .js_circle {
+    animation: jsanim 3s linear forwards;
+  }
+
+  .java_circle {
+    animation: javaanim 3s linear forwards;
+  }
+
+  .python_circle {
+    animation: pythonanim 3s linear forwards;
+  }
+
+  .wordpress_circle {
+    animation: wpanim 3s linear forwards;
+  }
+
+  @keyframes htmlanim {
+    100% {
+      stroke-dashoffset: 150;
+    }
+  }
+
+  @keyframes cssanim {
+    100% {
+      stroke-dashoffset: 200;
+    }
+  }
+
+  @keyframes jsanim {
+    100% {
+      stroke-dashoffset: 300;
+    }
+  }
+
+  @keyframes javaanim {
+    100% {
+      stroke-dashoffset: 225;
+    }
+  }
+
+  @keyframes pythonanim {
+    100% {
+      stroke-dashoffset: 360;
+    }
+  }
+
+  @keyframes wpanim {
+    100% {
+      stroke-dashoffset: 125;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .skills>.row>.skill>.outer>.inner>i {
+    z-index: 999;
+    color: white;
+    transition: color 500ms ease;
+  }
+
+  .skills>.row>.skill>.outer>.inner>i:hover {
+    color: rgb(132, 175, 255);
+  }
+
+}
+
+/* ---------------------------------------------------------------- */
+/* c. Seccion Works (Slideshow)
+ ------------------------------------------------------------------ */
+
+@media only screen and (min-width: 769px) {
+  .card-title::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: calc(var(--padding)*-1);
+    bottom: -5px;
+    width: calc(100% + var(--padding));
+    background: rgb(77, 225, 255);
+    transform-origin: left;
+    transition: transform 500ms ease;
+  }
+
+  .card:hover .card-title::after,
+  .card:focus-within .card-title::after {
+    transform: scaleX(1);
+  }
+
+  @media (hover) {
+    .card-content {
+      transform: translateY(55%);
+      transition: transform 500ms ease;
+    }
+
+    .card:hover .card-content,
+    .card:focus-within .card-content {
+      transform: translateY(0);
+      transition-delay: 500ms;
+    }
+
+    .card:focus-within .card-content {
+      transition-duration: 0ms;
+    }
+
+    .card-content>*:not(.card-title) {
+      opacity: 0;
+      transition: opacity 500ms linear;
+    }
+
+    .card:hover .card-content>*:not(.card-title),
+    .card:focus-within .card-content>*:not(.card-title) {
+      opacity: 1;
+      transition-delay: 850ms;
+    }
+
+    .card-title::after {
+      transform: scaleX(0);
+    }
+  }
+
+  .card-button:hover,
+  .card-button:focus {
+    background-color: rgb(45, 145, 165);
+  }
+}
+
+
+/* ---------------------------------------------------------------- */
+/* d. Seccion Footer
+ ------------------------------------------------------------------ */
+
+@media only screen and (min-width:769px) {
+  .topbutton:hover {
+    color: var(--clr-inverse);
+  }
+
+  .topbuttonHideAnim {
+    transform: translateY(150%);
+    transition: transform 250ms ease;
+  }
+}
+
+.topbuttonHideAnimMobile {
+  transform: translateY(200%);
+  transition: transform 250ms ease;
+}
+
+
+/* ---------------------------------------------------------------- */
+/* e. No Animation Section / Reduced Motion
+ ------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0ms !important;
+  }
+}

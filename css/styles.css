@@ -1,0 +1,404 @@
+/*
+=====================================================================
+*   
+*   
+*   
+=====================================================================
+
+TOC:
+a. Reset
+b. Default Styles
+
+
+=================================================================== */
+
+/* ---------------------------------------------------------------- */
+/* a. Reset
+ ------------------------------------------------------------------ */
+
+html {
+   scroll-behavior: smooth;
+   forced-color-adjust: none;
+}
+
+body,
+header,
+section,
+nav {
+   margin: 0;
+   padding: 0;
+   border: none;
+   outline: none;
+   font-size: 100%;
+   vertical-align: baseline;
+   background: transparent;
+}
+
+.mobile-only {
+   display: none;
+}
+
+/* ---------------------------------------------------------------- */
+/* b. Default Styles
+ ------------------------------------------------------------------ */
+
+.site-logo {
+   --clr-neon: rgb(77, 225, 255);
+   --clr-bg: rgb(30, 40, 45);
+
+   position: relative;
+
+   font-size: 1.2em;
+   color: var(--clr-neon);
+   border: var(--clr-neon) 1px solid;
+   border-radius: 0.25em;
+   padding: 0.5em 1em;
+
+   cursor: pointer;
+   text-decoration: none;
+   text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.5),
+      0 0 0.5em currentColor;
+   box-shadow: inset 0 0 0.7em 0 var(--clr-neon),
+      0 0 0.7em 0 var(--clr-neon);
+   transition: border-radius 2s;
+   transition-timing-function: cubic-bezier(0.5, 0.25, 0.25, 0.15);
+
+   z-index: 999;
+}
+
+/* -- Nav -- */
+
+.navmenu {
+   position: relative;
+   display: flex;
+   width: 100%;
+   top: 20%;
+   transform: translateX(-4%);
+   justify-content: center;
+   align-items: center;
+   padding: 0.5em;
+   background: transparent;
+}
+
+.nav__list {
+   list-style: none;
+   padding: 0;
+   display: flex;
+}
+
+.nav__link {
+   --text: white;
+   --spacing: 1em;
+   text-decoration: none;
+   color: var(--text);
+   display: inline-block;
+   padding: calc(var(--spacing) / 2) var(--spacing);
+   position: relative;
+   letter-spacing: 2px;
+   font-size: 1rem;
+   padding: 0.5em;
+   letter-spacing: 0.1em;
+   transition: color 0.5s;
+}
+
+/* -- End Nav -- */
+
+/* -- Seccion Home -- */
+
+/* Botones Sociales */
+
+.social__list {
+   list-style: none;
+   margin: 1.5em;
+   padding: 0;
+   display: flex;
+}
+
+.social__link {
+   margin: 0em 1.5em;
+   transition: color 0.5s ease-in-out;
+}
+
+/* End Social */
+
+/* Fin Seccion Home */
+
+/* -- Sección Resume -- */
+
+.skills {
+   margin: 4rem 0 4rem -20rem;
+   display: block;
+}
+
+/* 2. Fuentes ----------------------------------------------------- */
+
+.home h1 {
+   font: 5em 'Segoe UI', 'Century Gothic';
+   color: #ffffff;
+   text-shadow: 5px 2px rgba(135, 160, 165, 0.75);
+   font-style: italic;
+
+}
+
+.home h3 {
+   font: 1.5em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   line-height: 32px;
+   color: #d9f1ff;
+   font-style: italic;
+
+}
+
+.social__link {
+   color: #ffffff !important;
+}
+
+.about h2 {
+   margin: 1.5em;
+}
+
+.resume h2 {
+   font: 1.7em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #a0bfe5;
+   font-style: italic;
+
+}
+
+.resume h3 {
+   font: 1.2em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #daedff;
+   font-style: italic;
+
+}
+
+.resume p {
+   font: 1.25em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   line-height: 1.5em;
+   color: rgb(255, 255, 255);
+
+}
+
+.resume .fa-brands {
+   font-size: 5em;
+   color: #ffffff;
+}
+
+#skills h3 {
+   font: .90em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #ffffff;
+   font-style: italic;
+
+}
+
+i {
+   font-size: 1.5em;
+}
+
+p {
+   font: 1.25em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   line-height: 32px;
+   color: #b9d7e7;
+}
+
+h2 {
+   font: 42px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #ffffff;
+
+}
+
+h3 {
+   font: 20px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #c8dae4;
+
+}
+
+/* 3. Links ------------------------------------------------------- */
+
+.home a {
+   font: 1em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   line-height: 32px;
+   color: #9edbff;
+   font-style: italic;
+
+}
+
+a {
+   font: 1em 'opensans-bold', sans-serif;
+   color: #ffffff;
+   text-decoration: none;
+}
+
+button {
+   background-color: rgb(65, 200, 230);
+   color: rgb(255, 255, 255);
+}
+
+.btn_cv {
+   --background: white;
+   --bg-invert: rgb(65, 200, 230);
+   --font-color: black;
+   --font-color-invert: white;
+
+   cursor: pointer;
+   color: var(--font-color);
+   background-color: var(--background);
+   border: var(--background) 0.1em solid;
+   border-radius: 0.25em;
+   padding: 1em 1.5em;
+
+   transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+
+.btn {
+   --clr-neon: rgb(65, 200, 230);
+   --clr-inverse: #6340D5;
+   --clr-text: rgb(29, 41, 48);
+   --clr-text-inverse: white;
+
+   font-size: 1.5em;
+   color: var(--clr-text);
+   background-color: var(--clr-neon);
+   border: var(--clr-neon) 1px solid;
+   border-radius: 0.25em;
+   padding: 1.25em 2em;
+
+   cursor: pointer;
+   text-decoration: none;
+   transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+   transition-timing-function: linear;
+}
+
+.contactIcon {
+   --backgroundColor: white;
+   --clr-inverse: #9f81ff;
+
+   color: var(--backgroundColor);
+   font-size: 1.25em;
+   cursor: pointer;
+   margin: 0em 1.5em;
+   transition: color 0.25s;
+   transition-timing-function: linear;
+}
+
+.contactIcon:hover {
+   color: var(--clr-inverse);
+}
+
+/* 4. Slider ---------------------------------------------------- */
+
+.work-title {
+   color: rgba(0, 0, 0, 0.5);
+   font: 40px 'opensans-semibold', sans-serif;
+   letter-spacing: 1px;
+   text-align: center;
+}
+
+.slide-container {
+   overflow: auto;
+   white-space: nowrap;
+   display: block;
+}
+
+.slide-container>.row {
+   justify-content: center;
+}
+
+.card {
+   color: rgb(255, 255, 255);
+   background-image: url(https://picsum.photos/200);
+   background-size: cover;
+   margin: 1em 1em;
+   max-height: 300px;
+   width: 35ch;
+   text-align: left;
+   white-space: normal;
+   border-radius: 1em;
+   overflow: hidden;
+}
+
+
+
+
+.card-content {
+   --padding: 1.5em;
+   padding: var(--padding);
+   background: linear-gradient(hsl(0 0% 0% / 0),
+         hsl(20 0% 0% / 0.3) 20%,
+         hsl(0 0% 0% / 1));
+}
+
+.card-title {
+   position: relative;
+   width: max-content;
+   max-width: 100%;
+}
+
+.card-button {
+   cursor: pointer;
+   display: inline-block;
+   text-decoration: none;
+   background-color: rgb(65, 200, 230);
+   color: rgb(255, 255, 255);
+   padding: .95em 1em;
+   border-radius: .25em;
+   transition-duration: 0.5s;
+}
+
+/* 5. Formulario ---------------------------------------------------- */
+
+.contact-info {
+   padding: 3em 5em 1em;
+   margin-top: 5em;
+}
+
+.contact-title {
+   --padding: 1.5em;
+   font: 1.5em "Inter", sans-serif;
+   color: white;
+   margin-top: 0;
+   font-weight: 500;
+   position: relative;
+}
+
+.contact-title::after {
+   content: "";
+   position: absolute;
+   height: 2px;
+   left: calc(var(--padding)*-0.40);
+   bottom: -5px;
+   width: calc(13.5% + var(--padding));
+   background: rgb(77, 225, 255);
+}
+
+.contact-text {
+   font: 2.5em "Inter", sans-serif;
+   color: white;
+   margin-top: 0;
+   font-weight: 400;
+   line-height: 1.304;
+   max-width: 25ch;
+}
+
+.scrollerTop {
+   display: flex;
+   justify-content: right;
+   padding: 0.5em;
+
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 999;
+}
+
+.topbutton {
+   --backgroundColor: white;
+   --clr-inverse: rgb(77, 225, 255);
+
+   font-size: 3em;
+   color: var(--backgroundColor);
+   cursor: pointer;
+   margin: 0.5em;
+   transform: translateY(0);
+   transition: color 0.25s, transform 250ms;
+   transition-timing-function: linear;
+}

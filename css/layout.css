@@ -1,0 +1,187 @@
+/*
+=====================================================================
+*   
+*   
+*   
+=====================================================================
+
+   TOC:
+   a. General Styles
+   b. Header Styles
+   c. Home Section
+   d. About Section
+   e. Resume Section
+   f. Portfolio Section
+   g. Contact Section
+   h. Footer
+
+===================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* a. General Styles
+/* ------------------------------------------------------------------ */
+
+body {
+    background-color: rgb(25, 25, 25);
+}
+
+.home {
+    position: relative;
+    min-height: 65em;
+    width: 100%;
+    text-align: center;
+    display: block;
+    background: #161415 url(../img/header-background.jpeg) no-repeat top center;
+    background-size: cover !important;
+}
+
+.about {
+    position: relative;
+    min-height: 300px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0px;
+    background: rgb(25, 25, 25);
+    box-shadow: 0 3px 100px -50px rgb(60, 70, 80);
+}
+
+.resume {
+    position: relative;
+    min-height: 1600px;
+    width: 100%;
+    display: block;
+    background: rgb(100, 125, 150) url(../img/resume-background.jpg) no-repeat top left;
+    background-size: cover;
+}
+
+.works {
+    position: relative;
+    min-height: 500px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    background: rgb(167, 203, 220);
+}
+
+.reviews {
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    background: rgb(25, 25, 25);
+}
+
+.contact {
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    background: rgb(25, 25, 25);
+}
+
+footer {
+    position: relative;
+    min-height: 100px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    background: #161415;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* ------------------------------------------------------------------ */
+/* b. Header Styles
+/* ------------------------------------------------------------------ */
+
+/* Header */
+
+header {
+    --text: white;
+    --background: transparent;
+
+    color: var(--text);
+    background: var(--background);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 4em;
+
+    transition: background 250ms ease-in;
+
+}
+
+/* End Header */
+
+/* ------------------------------------------------------------------ */
+/* c. Home Section
+/* ------------------------------------------------------------------ */
+
+.home .banner-text {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 15%;
+    width: 85%;
+    padding-bottom: 5em;
+}
+
+.social {
+    display: flex;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------------ */
+/* d. About Section
+/* ------------------------------------------------------------------ */
+
+.about {
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+/* ------------------------------------------------------------------ */
+/* e. Resume Section
+/* ------------------------------------------------------------------ */
+
+.resume {
+    display: inline-block;
+    text-align: justify;
+}
+
+#educacion .row,
+.habilidades .row {
+    padding: 3em 0em;
+}
+
+.section-title {
+    align-self: start;
+    top: 4em;
+    position: sticky;
+}
+
+.descripcion {
+    margin-right: 30%;
+    max-width: 100ch;
+    color: rgba(256, 256, 256, 0.75);
+}

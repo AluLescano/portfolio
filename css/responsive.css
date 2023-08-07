@@ -1,0 +1,875 @@
+body {
+    background-color: rgb(25, 25, 25);
+}
+
+/*
+==========================================
+*
+*
+*
+==========================================
+
+TOC:
+a. Header Styles
+b. Home Section
+c. About Section
+d. Resume Section
+e. Skill Animations
+f. Works
+g. Contact
+h. Footer
+i. Fonts
+
+==========================================*/
+
+/* ------------------------------------------------------------------ */
+/* a. Header Styles
+/* ------------------------------------------------------------------ */
+
+.pc-only {
+    display: none;
+}
+
+/* -- Nav -- */
+
+.menu-toggle {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    top: 60%;
+    left: 5%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-toggle i {
+    font-size: 40px;
+    color: white;
+}
+
+.navmenu:not(.show) {
+    display: none;
+    pointer-events: none;
+}
+
+.show {
+    display: flex;
+    position: absolute;
+    top: 150%;
+    left: 2.5%;
+    width: 100%;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 1em;
+    pointer-events: auto;
+}
+
+.nav__list {
+    background-color: #161415d4;
+    border: 1px solid rgb(185, 139, 255);
+    border-radius: 2.5em;
+    list-style: none;
+    padding: 5%;
+    width: fit-content;
+    display: block;
+}
+
+.nav__link {
+    --text: white;
+    --spacing: 1em;
+    text-decoration: none;
+    color: var(--text);
+    display: block;
+    padding: 0.5em;
+    position: relative;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    padding: 0.5em;
+    letter-spacing: 0.1em;
+    transition: color 0.5s;
+}
+
+/* -- End Nav -- */
+
+/* Header */
+
+header {
+    --text: white;
+    --background: transparent;
+
+    color: var(--text);
+    background: var(--background);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 4em;
+
+    transition: background 250ms ease-in;
+
+}
+
+/* End Header */
+
+/* ------------------------------------------------------------------ */
+/* b. Home Section
+/* ------------------------------------------------------------------ */
+
+@media only screen and (orientation: landscape) {
+    .home {
+        position: relative;
+        min-height: 32.5em;
+        width: 100%;
+        text-align: center;
+        display: block;
+        background: #161415 url(../img/header-background.jpeg) no-repeat top center;
+        background-size: cover !important;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    .home {
+        position: relative;
+        min-height: 42.5em;
+        width: 100%;
+        text-align: center;
+        display: block;
+        background: #161415 url(../img/header-background.jpeg) no-repeat top center;
+        background-size: cover !important;
+    }
+}
+
+
+.home .banner-text {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 15%;
+    width: 85%;
+    padding-bottom: 5em;
+}
+
+.home h1 {
+    font: 3.5em 'Segoe UI', 'Century Gothic';
+    color: #ffffff;
+    text-shadow: 5px 2px rgba(135, 160, 165, 0.75);
+    font-style: italic;
+
+}
+
+.home h3 {
+    font: 1.5em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 32px;
+    color: #ffffff;
+    font-style: italic;
+
+}
+
+.home a {
+    font: 1em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 32px;
+    color: #c2e8ff;
+    font-style: italic;
+
+}
+
+.home i {
+    font-size: 1.5em;
+}
+
+.social {
+    display: flex;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    justify-content: center;
+    align-items: center;
+}
+
+.social__list {
+    list-style: none;
+    margin: 1.5em;
+    padding: 0;
+    display: flex;
+}
+
+.social__link {
+    margin: 0em 1.5em;
+}
+
+.social__link {
+    color: #ffffff !important;
+}
+
+.reviews {
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    background: rgb(25, 25, 25);
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.home .banner-text {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 15%;
+    width: 85%;
+    padding-bottom: 5em;
+}
+
+.social {
+    display: flex;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------------ */
+/* c. About Section
+/* ------------------------------------------------------------------ */
+
+.about {
+    position: relative;
+    min-height: 55em;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0px;
+    background: rgb(25, 25, 25);
+    box-shadow: 0 3px 100px -50px rgb(60, 70, 80);
+    padding-bottom: 5%;
+}
+
+.about .row {
+    display: flex;
+    flex-direction: column;
+}
+
+#resumen-about p {
+    text-align: left;
+}
+
+.contact__info-user p {
+    text-align: center !important;
+}
+
+.contact__info-user i {
+    font-size: 1.5em;
+}
+
+#cv-div {
+    padding-top: 15%;
+}
+
+.btn_cv {
+    --background: rgb(65, 200, 230);
+    --font-color-invert: black;
+
+    cursor: pointer;
+    color: var(--font-color);
+    background-color: var(--background);
+    border: var(--background) 0.1em solid;
+    border-radius: 0.25em;
+    padding: 1em 1.5em;
+
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+
+/* ------------------------------------------------------------------ */
+/* d. Resume Section
+/* ------------------------------------------------------------------ */
+
+.resume {
+    position: relative;
+    min-height: 140rem;
+    width: 100%;
+    display: block;
+    background: rgb(100, 125, 150);
+    background-image: url(../img/resume-background.jpg);
+    background-size: cover;
+    display: inline-block;
+    text-align: justify;
+}
+
+.resume .row {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume .row:first-child {
+    align-items: center;
+}
+
+.resume .row>.col-sm-4 {
+    display: flex;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 2em !important;
+    top: 5em;
+}
+
+.resume h2 {
+    font: 1.40em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #a0bfe5;
+    font-style: italic;
+
+}
+
+.resume h3 {
+    font: 0.925em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #daedff;
+    font-style: italic;
+
+}
+
+.resume p {
+    font: 1em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5em;
+    color: rgb(255, 255, 255);
+
+}
+
+.descripcion {
+    max-width: 100ch;
+    color: rgba(256, 256, 256, 0.75);
+}
+
+.habilidades p {
+    margin-right: 0 !important;
+}
+
+.resume .fa-brands {
+    font-size: 5em;
+    color: #ffffff;
+}
+
+/* ------------------------------------------------------------------ */
+/* e. Skill Animations
+/* ------------------------------------------------------------------ */
+
+@media only screen and (max-width: 993px) and (orientation: portrait) {
+    .habilidades .row {
+        display: block;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 3.5em;
+    }
+}
+
+.skill {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    margin: 0 0 25% 0;
+}
+
+.outer {
+    height: 160px;
+    width: 160px;
+    padding: 20px;
+    margin: 0 0 25% 0;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.5),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+}
+
+.inner {
+    height: 120px;
+    width: 120px;
+    padding: 20px;
+    margin: 0 0 25% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px -1px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+}
+
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+}
+
+.html_circle {
+    animation: htmlanim 3s linear forwards;
+}
+
+.css_circle {
+    animation: cssanim 3s linear forwards;
+}
+
+.js_circle {
+    animation: jsanim 3s linear forwards;
+}
+
+.java_circle {
+    animation: javaanim 3s linear forwards;
+}
+
+.python_circle {
+    animation: pythonanim 3s linear forwards;
+}
+
+.wordpress_circle {
+    animation: wpanim 3s linear forwards;
+}
+
+@keyframes htmlanim {
+    100% {
+        stroke-dashoffset: 150;
+    }
+}
+
+@keyframes cssanim {
+    100% {
+        stroke-dashoffset: 200;
+    }
+}
+
+@keyframes jsanim {
+    100% {
+        stroke-dashoffset: 300;
+    }
+}
+
+@keyframes javaanim {
+    100% {
+        stroke-dashoffset: 225;
+    }
+}
+
+@keyframes pythonanim {
+    100% {
+        stroke-dashoffset: 360;
+    }
+}
+
+@keyframes wpanim {
+    100% {
+        stroke-dashoffset: 125;
+    }
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.skills>.row>.skill>.outer>.inner>i {
+    font-size: 3.5em;
+    z-index: 999;
+    color: white;
+    transition: color 500ms ease;
+}
+
+
+@media only screen and ((min-width: 993px) and (orientation: portrait)),
+only screen and (orientation: landscape) {
+    .skills {
+        margin: 4rem 0 4rem;
+        display: block;
+    }
+
+    .skills .row {
+        flex-direction: row;
+    }
+
+    .skill {
+        width: 160px;
+        height: 160px;
+        position: relative;
+    }
+
+    .outer {
+        height: 160px;
+        width: 160px;
+        padding: 20px;
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.5),
+            -6px -6px 10px -1px rgba(255, 255, 255, 0.25);
+        border-radius: 50%;
+    }
+
+    .inner {
+        height: 120px;
+        width: 120px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+            inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+            -0.5px -0.5px 0px -1px rgba(255, 255, 255, 1),
+            0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+            0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+        border-radius: 50%;
+    }
+
+    circle {
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 450;
+        stroke-dashoffset: 450;
+    }
+
+    .html_circle {
+        animation: htmlanim 3s linear forwards;
+    }
+
+    .css_circle {
+        animation: cssanim 3s linear forwards;
+    }
+
+    .js_circle {
+        animation: jsanim 3s linear forwards;
+    }
+
+    .java_circle {
+        animation: javaanim 3s linear forwards;
+    }
+
+    .python_circle {
+        animation: pythonanim 3s linear forwards;
+    }
+
+    .wordpress_circle {
+        animation: wpanim 3s linear forwards;
+    }
+
+    @keyframes htmlanim {
+        100% {
+            stroke-dashoffset: 150;
+        }
+    }
+
+    @keyframes cssanim {
+        100% {
+            stroke-dashoffset: 200;
+        }
+    }
+
+    @keyframes jsanim {
+        100% {
+            stroke-dashoffset: 300;
+        }
+    }
+
+    @keyframes javaanim {
+        100% {
+            stroke-dashoffset: 225;
+        }
+    }
+
+    @keyframes pythonanim {
+        100% {
+            stroke-dashoffset: 360;
+        }
+    }
+
+    @keyframes wpanim {
+        100% {
+            stroke-dashoffset: 125;
+        }
+    }
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .skills>.row>.skill>.outer>.inner>i {
+        z-index: 999;
+        color: white;
+        transition: color 500ms ease;
+    }
+
+    .skills>.row>.skill>.outer>.inner>i:hover {
+        color: rgb(132, 175, 255);
+    }
+}
+
+
+/* ------------------------------------------------------------------ */
+/* f. Works
+/* ------------------------------------------------------------------ */
+
+/* 1. Slider ---------------------------------------------------- */
+
+.works {
+    position: relative;
+    min-height: 500px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    background: rgb(167, 203, 220);
+    padding: 2rem 0rem;
+}
+
+.works .slide-container {
+    padding-left: 2.25rem;
+}
+
+.works .row {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-title {
+    color: rgb(30, 40, 50) !important;
+    font: 2.5em 'opensans-semibold', sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+    z-index: 999;
+}
+
+.card {
+    color: rgb(255, 255, 255);
+    background: transparent;
+    margin: 1em 1em;
+    max-height: 300px;
+    width: 35ch;
+    text-align: left;
+    white-space: normal;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.card-content {
+    --padding: 1.5em;
+    padding: var(--padding);
+}
+
+@media only screen and (min-width: 993px) and (orientation: portrait),
+only screen and (orientation: landscape) {
+
+    .works .row {
+        flex-direction: row;
+    }
+
+    .works .slide-container {
+        padding-left: 0rem;
+    }
+
+    .card {
+        color: rgb(255, 255, 255);
+        background: transparent;
+        margin: 1em 0.25em;
+        max-height: 300px;
+        width: 35ch;
+        text-align: left;
+        white-space: normal;
+        border-radius: 1em;
+        overflow: hidden;
+    }
+
+    .card-content {
+        --padding: 0em;
+        padding: var(--padding);
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* g. Contact
+/* ------------------------------------------------------------------ */
+
+.contact {
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    background: rgb(25, 25, 25);
+}
+
+.contact-info {
+    padding: 3em 0em;
+    margin-top: 1.5em;
+}
+
+.contact-info .row {
+    display: block;
+    flex-direction: column;
+}
+
+.contact-title {
+    --padding: 1.5em;
+    font: 1.5em "Inter", sans-serif;
+    color: white;
+    margin-top: 0;
+    font-weight: 500;
+    position: relative;
+}
+
+.contact-title::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: calc(var(--padding)*-0.40);
+    bottom: -5px;
+    width: calc(15.5% + var(--padding));
+    background: rgb(77, 225, 255);
+}
+
+.contact-text {
+    font: 2em "Inter", sans-serif;
+    color: white;
+    transform: translateY(10%);
+    font-weight: 400;
+    line-height: 1.304;
+    max-width: 30ch;
+}
+
+#email-div {
+    margin-top: 4.5em !important;
+}
+
+#mailtoui-button {
+    --clr-neon: rgb(65, 200, 230);
+    --clr-text: rgb(30, 40, 50);
+
+    font-size: 1.25em;
+    color: var(--clr-text) !important;
+    background-color: var(--clr-neon);
+    border: var(--clr-neon) 1px solid;
+    border-radius: 0.25em;
+    padding: 1.25em 2.75em;
+
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.scrollerTop {
+    display: flex;
+    justify-content: right;
+    padding: 0.5em;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.topbutton {
+    --backgroundColor: white;
+    --clr-inverse: rgb(77, 225, 255);
+
+    font-size: 3em;
+    color: var(--backgroundColor);
+    cursor: pointer;
+    margin: 0.5em;
+    transform: translateY(0);
+    transition: color 0.25s, transform 250ms;
+    transition-timing-function: linear;
+}
+
+@media only screen and ((min-width: 993px) and (orientation: portrait)),
+(orientation: landscape) {
+    .contact-title {
+        --padding: 1.5em;
+        font: 1.5em "Inter", sans-serif;
+        color: white;
+        margin-top: 0;
+        margin-left: 1.5em;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .contact-text {
+        font: 2em "Inter", sans-serif;
+        color: white;
+        transform: translateY(10%);
+        font-weight: 400;
+        line-height: 1.304;
+        max-width: 50ch;
+        text-align: center;
+    }
+}
+
+
+/* ------------------------------------------------------------------ */
+/* h. Footer
+/* ------------------------------------------------------------------ */
+
+footer {
+    position: relative;
+    min-height: 100px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    background: #161415;
+}
+
+footer p {
+    padding-top: 2.5em !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* i. Fonts
+/* ------------------------------------------------------------------ */
+
+a {
+    font: 1em 'opensans-bold', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    font: 1.25em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 32px;
+    color: #b9d7e7;
+}
+
+h2 {
+    font: 42px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+
+}
+
+h3 {
+    font: 20px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #c8dae4;
+
+}
+
+.contact .social a {
+    font-size: 2em;
+    padding: 0 0.5em;
+}
