@@ -14,6 +14,7 @@
    f. Portfolio Section
    g. Contact Section
    h. Footer
+   i. Error Section
 
 ===================================================================== */
 
@@ -31,7 +32,7 @@ body {
     width: 100%;
     text-align: center;
     display: block;
-    background: #161415 url(../img/header-background.jpeg) no-repeat top center;
+    background: #161415 url(../img/header-background.jpg) no-repeat top center;
     background-size: cover !important;
 }
 
@@ -52,7 +53,7 @@ body {
     min-height: 1600px;
     width: 100%;
     display: block;
-    background: rgb(100, 125, 150) url(../img/resume-background.jpg) no-repeat top left;
+    background: rgb(100, 125, 150) url(../img/resume-background.png) no-repeat top left;
     background-size: cover;
 }
 
@@ -133,7 +134,7 @@ header {
 /* c. Home Section
 /* ------------------------------------------------------------------ */
 
-.home .banner-text {
+.home .banner-text{
     color: white;
     display: inline-block;
     vertical-align: middle;
@@ -184,4 +185,17 @@ header {
     margin-right: 30%;
     max-width: 100ch;
     color: rgba(256, 256, 256, 0.75);
+}
+
+/* ------------------------------------------------------------------ */
+/* i. Error Section
+/* ------------------------------------------------------------------ */
+
+.error {
+    position: relative;
+    min-height: 950px;
+    width: 100%;
+    display: block;
+    background: rgb(100, 125, 150) url(../img/resume-background.png) no-repeat top left;
+    background-size: cover;
 }

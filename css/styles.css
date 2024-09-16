@@ -130,7 +130,7 @@ nav {
    display: block;
 }
 
-/* 2. Fuentes ----------------------------------------------------- */
+/* 1. Fuentes ----------------------------------------------------- */
 
 .home h1 {
    font: 5em 'Segoe UI', 'Century Gothic';
@@ -189,6 +189,12 @@ nav {
 
 }
 
+.error h1{
+   font: 5em 'Segoe UI', 'Century Gothic';
+   color: #ffffff;
+   font-style: italic;
+}
+
 i {
    font-size: 1.5em;
 }
@@ -211,7 +217,7 @@ h3 {
 
 }
 
-/* 3. Links ------------------------------------------------------- */
+/* 2. Links ------------------------------------------------------- */
 
 .home a {
    font: 1em 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -267,6 +273,12 @@ button {
    transition-timing-function: linear;
 }
 
+.btn:hover{
+   color: var(--clr-text-inverse);
+   background-color: var(--clr-inverse);
+   border-color: var(--clr-inverse);
+}
+
 .contactIcon {
    --backgroundColor: white;
    --clr-inverse: #9f81ff;
@@ -283,7 +295,7 @@ button {
    color: var(--clr-inverse);
 }
 
-/* 4. Slider ---------------------------------------------------- */
+/* 3. Slider ---------------------------------------------------- */
 
 .work-title {
    color: rgba(0, 0, 0, 0.5);
@@ -304,7 +316,7 @@ button {
 
 .card {
    color: rgb(255, 255, 255);
-   background-image: url(https://picsum.photos/200);
+   background: white;
    background-size: cover;
    margin: 1em 1em;
    max-height: 300px;
@@ -314,9 +326,6 @@ button {
    border-radius: 1em;
    overflow: hidden;
 }
-
-
-
 
 .card-content {
    --padding: 1.5em;
@@ -343,7 +352,7 @@ button {
    transition-duration: 0.5s;
 }
 
-/* 5. Formulario ---------------------------------------------------- */
+/* 4. Formulario ---------------------------------------------------- */
 
 .contact-info {
    padding: 3em 5em 1em;

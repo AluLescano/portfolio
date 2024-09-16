@@ -157,7 +157,7 @@ header {
     padding-bottom: 5em;
 }
 
-.home h1 {
+.home h1, .error h1 {
     font: 3.5em 'Segoe UI', 'Century Gothic';
     color: #ffffff;
     text-shadow: 5px 2px rgba(135, 160, 165, 0.75);
